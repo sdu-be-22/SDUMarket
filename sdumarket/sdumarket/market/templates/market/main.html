@@ -11,6 +11,7 @@
 			<p>{{ product.description }}</p>
 			<p>{{product.quantity}} left in stock</p> 
 			<a href="{% url 'product' product.id %}">Learn more</a>
+			<hr>
 		</div>
 	{% endfor %}
 </div>

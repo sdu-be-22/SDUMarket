@@ -26,7 +26,6 @@ def main(request):
 	return render(request, 'market/main.html', context)
 
 def category(request, cat_id):
-
 	rec = Product.objects.filter(pk = cat_id)
 	header = Category.objects.get(pk = cat_id).name
 	context = {
