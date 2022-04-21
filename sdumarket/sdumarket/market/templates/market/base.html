@@ -12,8 +12,9 @@
 
 	<h2>Categories</h2>
 	<div>
-		<a href="{% url 'stationery' %}">Stationery</a>
-		<a href="{% url 'tech' %}">Tech</a>
+		{% for category in categories %}
+			<a href="{% url 'category' category.id %}">{{category.name}}</a>
+		{% endfor %}
 	</div>
 
 	{% block content %}

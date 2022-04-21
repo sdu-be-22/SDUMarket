@@ -1,6 +1,7 @@
 {% extends 'market/base.html' %}
 
 {% block content %}
+
 <div id=mainmenu>
 	<h2>Buy some {{ header }}!</h2>
 	{% for product in recommend %}
@@ -9,7 +10,7 @@
 			<p>{{ product.price }}</p>
 			<p>{{ product.description }}</p>
 			<p>{{product.quantity}} left in stock</p> 
-			<a href="product/?"></a>
+			<a href="{% url 'product' product.id %}">Learn more</a>
 		</div>
 	{% endfor %}
 </div>

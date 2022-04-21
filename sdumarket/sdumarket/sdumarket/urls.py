@@ -19,8 +19,9 @@ from market.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('stationery/', stationery, name='stationery'),
-    path('tech/', tech, name='tech'),
-    path('product/', product, name='product'),
+    # path('stationery/', stationery, name='stationery'),
+    # path('tech/', tech, name='tech'),
+    path('category/<int:cat_id>', category, name='category'),
+    path('product/<int:product_id>', product, name='product'),
     path('', main, name='main'),
 ]

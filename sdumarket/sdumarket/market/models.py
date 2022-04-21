@@ -15,3 +15,7 @@ class Product(models.Model):
 	quantity = models.IntegerField()
 	category = models.ForeignKey('Category', on_delete=models.PROTECT, null=True)
 	item = models.ForeignKey('Item', on_delete=models.PROTECT, null=True)
+
+
+
+	
